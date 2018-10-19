@@ -60,7 +60,11 @@ const createTaskItem = function(form){
   const tickBox = document.createElement("input");
   tickBox.type = "checkbox";
   // tickBox.createElement("input");
-  taskItem.appendChild(tickBox);
+  // taskItem.appendChild(tickBox);
+
+  const tdForTick = document.createElement("td");
+  tdForTick.appendChild(tickBox);
+  taskItem.appendChild(tdForTick);
   // now that it's all bundled up in our taskItem item - output it.
   return taskItem
 
@@ -72,4 +76,7 @@ const handleDeleteAllClick = function(event){
   const taskList = document.querySelector("#task-list")
   // innerHTML gets or sets the content instide the HTML tags
   taskList.innerHTML = "";
+
+  console.log("table deleted");
+
 };

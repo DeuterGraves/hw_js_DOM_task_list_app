@@ -1,0 +1,48 @@
+
+
+/* helps with the sticky footer stuff */
+html{
+  height: 100%;
+}
+
+
+body{
+  /*background: white url("/images/muttfieldbackground3.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right bottom;
+  font-family: verdana;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100%;
+  margin: 0;*/
+}
+
+
+/* table styles */
+
+td {
+  padding-right: 10px;
+}
+
+td.taskBody{
+  min-width: 220px;
+}
+
+/* helps forms break beautifully when scaling. */
+
+label {
+  white-space: nowrap;
+}
+
+input#priority{
+  width: 50px;
+}
+input#task{
+  width: 220px;
+}
+
+form{
+
+}
