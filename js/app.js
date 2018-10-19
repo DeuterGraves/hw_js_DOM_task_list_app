@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   const newItemForm = document.querySelector("#new-task-form");
   newItemForm.addEventListener("submit", handleNewTaskSubmit);
 
-// create a variable to name the delete all button and point it to the delete all button in the html
+  // create a variable to name the delete all button and point it to the delete all button in the html
   const deleteAllButton =
   document.querySelector("#delete-all");
   //  listen for the user to click 'delete all' and then execute the code.
@@ -34,28 +34,33 @@ const handleNewTaskSubmit = function(event){
 // function to create a task item on the list of task items.
 const createTaskItem = function(form){
   // create a list item for the task item.
-  const taskItem = document.createElement("li");
+  const taskItem = document.createElement("tr");
   // class list is given this class so that we can decorate it with the css.
   taskItem.classList.add("task-item");
 
   // this is where we actually start printing out the new data
   //  I want to merge the importance A,B,C or D with the item number to create a single string like A1 , B3, C10
   // create an html tag for the document and give it a variable name.
-  const importance = document.createElement("p");
+  const importance = document.createElement("td");
   // populate that tag with this content.
   importance.textContent = `${ form.importance.value }${ form.priority.value }`;
   // append this item to the parent element - add the task to the list
   taskItem.appendChild(importance);
-/*
+  /*
   const priority = document.createElement("p");
   priority.textContent = form.priority.value;
   taskItem.appendChild(priority);*/
 
   // repeat for the rest of the data.
-  const taskBody = document.createElement("p");
+  const taskBody = document.createElement("td");
   taskBody.textContent = form.task.value;
   taskItem.appendChild(taskBody);
 
+  // add a tick box for when the task is completed
+  const tickBox = document.createElement("input");
+  tickBox.type = "checkbox";
+  // tickBox.createElement("input");
+  taskItem.appendChild(tickBox);
   // now that it's all bundled up in our taskItem item - output it.
   return taskItem
 
