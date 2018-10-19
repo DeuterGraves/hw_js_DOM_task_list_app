@@ -11,12 +11,110 @@ body{
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: right bottom;
+  background-position: right bottom;*/
+  background-color: #F0F4E8;
   font-family: verdana;
+  color: #2D2A32;
   display: grid;
   grid-template-rows: 1fr auto;
   min-height: 100%;
-  margin: 0;*/
+  margin: 0;
+}
+
+.wrapper{
+  display:grid;
+  grid-template-areas: "hd"
+                       /* "nv" */
+                       "mn"
+                       "ft";
+  /* grid-template-rows: 150px; */
+  /* padding: 20px; */
+}
+
+/* header styles */
+.wrapper > header {
+  grid-area: hd;
+  background: #E822B6;
+  /* url("/images/muttfield.jpg"); */
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-repeat: no-repeat;
+  padding-left: 10px;
+  padding-top: 10px;
+  color: #F0F4E8;
+}
+
+header h1{
+  font-size: 2em;
+  font-weight: 700;
+  padding-left: 20px;
+}
+
+.wrapper > main {
+  grid-area: mn;
+  min-height: 400px;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom:10px;
+  padding-right: 25px;
+}
+
+fieldset{
+  border: 1px solid #C0C999;
+  border-radius: 8px;
+  padding: 20px 10px 10px 20px;
+  margin-top: 20px;
+}
+
+h1{
+  font-size: 1em;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+input:focus, select:focus {
+  outline-color: rgba(232, 34, 182, 0.8);
+  /* outline-color: rgba(71, 0, 99, 0.8); */
+}
+
+input[type="submit"]{
+  background-color: #E822B6;
+  /* color: #893168; */
+  font-family: verdana;
+  font-size: 1em;
+  cursor: pointer;
+  color: #F0F4E8;
+  border-radius: 8px;
+  /* border: none; */
+  /* text-decoration: underline; */
+}
+
+button{
+  margin-top: 15px;
+  background-color: #470063;
+  /* color: #893168; */
+  font-family: verdana;
+  font-size: .8em;
+  cursor: pointer;
+  color: #F0F4E8;
+  border-radius: 8px;
+  border: none;
+  float: right;
+  /* border: none; */
+  /* text-decoration: underline; */
+}
+
+
+.wrapper > footer {
+  grid-area: ft;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-color: #470063;
+  color: #F0F4E8;
+  /* height: 80px; */
+  padding: 20px;
 }
 
 
@@ -38,9 +136,14 @@ label {
 
 input#priority{
   width: 50px;
+  border-radius: 6px;
 }
 input#task{
   width: 220px;
+  border-radius: 6px;
+}
+.importance-dropdown{
+  border-radius: 8px;
 }
 
 form{
