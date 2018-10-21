@@ -41,9 +41,15 @@ const createTaskItem = function(form){
   // this is where we actually start printing out the new data
   //  I want to merge the importance A,B,C or D with the item number to create a single string like A1 , B3, C10
   // create an html tag for the document and give it a variable name.
+
+  // var form = document.querySelector("#new-task-form");
+  // need to get to just the radio area of the form, don't want ALLTHEDATA
+
+  // var data = new FormData(radioData)
+
   const importance = document.createElement("td");
   // populate that tag with this content.
-  importance.textContent = `${ form.importance.value }${ form.priority.value }`;
+  importance.textContent = `${ newTaskForm.gravity.value}${ form.priority.value }`;
   // append this item to the parent element - add the task to the list
   taskItem.appendChild(importance);
   /*
@@ -59,6 +65,8 @@ const createTaskItem = function(form){
   // add a tick box for when the task is completed
   const tickBox = document.createElement("input");
   tickBox.type = "checkbox";
+  // give the tickbox a class
+  tickBox.classList.add("tick-box");
   // tickBox.createElement("input");
   // taskItem.appendChild(tickBox);
 
@@ -80,3 +88,13 @@ const handleDeleteAllClick = function(event){
   console.log("table deleted");
 
 };
+
+// radio button handler
+function radioButtonData(event){
+  event.preventDefault();
+  {for(count=0;count<4;count++)
+    {if (newTaskForm.gravity[count].checked)
+      return newTaskForm.gravity[count].value;
+    }
+  }
+}

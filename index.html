@@ -15,18 +15,35 @@
     <main>
 
       <p>
-        <form class="" id = "new-task-form">
+        <form class="" id = "new-task-form" name = "newTaskForm">
           <fieldset>
             <legend>Task Details</legend>
-            <!-- Priority code: drop down, will become radio buttons A B C D options -->
-            <label for="importance-code">Task Importance
+            <!-- Priority code: drop down, will become radio buttons A B C D options
+            <label for="importance-code">Importance
               <select class="importance-dropdown" name="importance-code" id = "importance">
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
                 <option value="D">D</option>
               </select>
-            </label>
+            </label>-->
+
+            <!-- Priority Radio Buttons -->
+            <fieldset name="radioButtons">
+              <legend>Set task importance</legend>
+              <label for="">A
+                <input type="radio" name="gravity" id = "A" value="A" />
+              </label>
+              <label for="">B
+                <input type="radio" name="gravity" id = "B" value="B" />
+              </label>
+              <label for="">C
+                <input type="radio" name="gravity" id = "C" value="C" />
+              </label>
+              <label for="">D
+                <input type="radio" name="gravity" id = "D" value="D" />
+              </label>
+            </fieldset>
 
             <!-- priority rank - a number -->
             <label for="priority">Priority
@@ -35,8 +52,10 @@
             <br>
             <br>
 
+
+
             <!-- task - string input area -->
-            <label for="task">Task Details
+            <label for="task">Details
               <input type="text" name="take" id = "task" value="">
             </label>
 

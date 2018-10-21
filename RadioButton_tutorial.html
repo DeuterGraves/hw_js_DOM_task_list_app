@@ -1,0 +1,80 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>JavaScript Example 19.2</title>
+</head>
+<body>
+
+  <!-- <script>
+  function checkItem()
+
+  {for(count=0;count<4;count++)
+    {if (radioButtons.gravity[count].checked)
+      // alert(radioButtons.gravity[count].value+" is selected");
+      log.innerText = radioButtons.gravity[count].value;
+    }
+
+  }
+  </script> -->
+
+  <script>
+
+  var form = document.querySelector("form");
+  var log = document.querySelector("#log");
+
+// form.addEventListener("submit",
+function (event){
+    var data = new FormData(form);
+    var output = "";
+
+    for (const entry of data) {
+      output = entry[0] + "=" + entry[1];
+    };
+    log.innerText = output;
+    event.preventDefault();
+}, false);
+  </script>
+
+  <!-- <script>
+  function checkItem()
+  {for(count=0;count<5;count++)
+    {if (MyForm.item[count].checked)
+      alert(MyForm.item[count].value+" is selected");
+    }
+  }
+</script> -->
+<form name="radioButtons">
+  <input type="button" value="Select and Click" onclick="checkItem()"><br>
+  <fieldset name="radioButtons">
+    <legend>Set task importance</legend>
+    <label for="">W
+      <input type="radio" name="gravity" id = "W" value="W" />
+    </label>
+    <label for="">X
+      <input type="radio" name="gravity" id = "X" value="X" />
+    </label>
+    <label for="">Y
+      <input type="radio" name="gravity" id = "Y" value="Y" />
+    </label>
+    <label for="">Z
+      <input type="radio" name="gravity" id = "Z" value="Z" />
+    </label>
+  </fieldset>
+
+  <pre id="log">
+  </pre>
+<!-- <input type="button" value="Select and Click" onclick="checkItem()"><br>
+<input type="radio" name="item" value="Apple">
+<label>Apple</label><br>
+<input type="radio" name="item" value="Orange">
+<label>Orange</label><br>
+<input type="radio" name="item" value="Grape">
+<label>Grape</label><br>
+<input type="radio" name="item" value="Melon">
+<label>Melon</label><br>
+<input type="radio" name="item" value="Pineapple">
+<label>Pineapple</label><br> -->
+</form>
+</body>
+
+</html>
