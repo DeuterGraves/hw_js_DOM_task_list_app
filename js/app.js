@@ -50,6 +50,7 @@ const createTaskItem = function(form){
   const importance = document.createElement("td");
   // populate that tag with this content.
   importance.textContent = `${ newTaskForm.gravity.value}${ form.priority.value }`;
+  importance.classList.add(`${ newTaskForm.gravity.value }`)
   // append this item to the parent element - add the task to the list
   taskItem.appendChild(importance);
   /*

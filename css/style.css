@@ -127,6 +127,7 @@ input.tick-box:checked {
 
 td {
   padding-right: 10px;
+  padding-left: 20px;
 }
 
 td.taskBody{
@@ -151,6 +152,22 @@ input#task{
   border-radius: 8px;
 }
 
-form{
+.A{
+  background-color: #F286D7;
+  color: #F0F4E8;
+}
 
+.B{
+  background-color: #895C9B;
+  color: #F0F4E8;
+}
+
+.C{
+  background-color: #696E54;
+  color: #F0F4E8;
+}
+
+.D{
+  background-color: #535057;
+  color: #F0F4E8;
 }
